@@ -1,0 +1,13 @@
+create database airlineSystem;
+
+create table users(
+	username varchar(15) primary key,
+    	name varchar(30) not null,
+    	age int,
+    	contact varchar(13) unique,
+    	cnic varchar(13) unique,
+    	password varchar(20) not null,
+    	status varchar(15) not null
+);
+
+
