@@ -31,7 +31,7 @@ public class LoginController {
     private PasswordField passwordField;
     @FXML
     private ChoiceBox<String> statusChoice;
-    String st[] = {"Client", "Staff", "Admin"};
+    String st[] = {"Client", "Admin"};
     @FXML
     public void initialize(){
         statusChoice.setItems(statusChoicesList);

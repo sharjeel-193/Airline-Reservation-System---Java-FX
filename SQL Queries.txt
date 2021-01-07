@@ -1,13 +1,39 @@
-create database airlineSystem;
 
+create database airlineSystem
+
+drop table if exists users;
+drop table if exists Airport;
+drop table if exists Flight;
+drop table if exists Passengers;
 create table users(
 	username varchar(15) primary key,
-    	name varchar(30) not null,
-    	age int,
-    	contact varchar(13) unique,
-    	cnic varchar(13) unique,
-    	password varchar(20) not null,
-    	status varchar(15) not null
+    name varchar(30) not null,
+    dob date,
+    contact varchar(13) unique,
+    cnic varchar(13) unique,
+    password varchar(20) not null,
+    status varchar(15) not null
 );
 
+create table Airport(
+	airport_name varchar(20) primary key,
+    city varchar(20)
+);
 
+create table Flight(
+	flight_number int primary key,
+    total_seats int,
+    departure_time time,
+    start_location varchar(20),
+    destination varchar(20),
+    foreign key (start_location) references airport(airport_name),
+    foreign key (destination) references airport(airport_name)
+);
+
+create table passengers(
+	flight_number int,
+    username varchar(15),
+    seat_no int,
+    foreign key(username) references users(username),
+    foreign key(flight_number) references flight(flight_number)
+);

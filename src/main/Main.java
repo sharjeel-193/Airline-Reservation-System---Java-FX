@@ -15,6 +15,7 @@ public class Main extends Application {
         primaryStage.setTitle("Login - Your AIR");
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(new Scene(root, 1000, 600));
+//        primaryStage.setScene(new Scene(root, 1500, 1000));
         primaryStage.show();
     }
 
