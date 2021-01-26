@@ -48,7 +48,7 @@ public class RegisterController {
             signUpMessage.setText("Invalid Contact Number");
         } else if (!valdateUsername(userNameField.getText())){
             signUpMessage.setText("Invalid Username Chosen");
-        } else if (passwordField.getText().length()<12){
+        } else if (passwordField.getText().length()<8){
             signUpMessage.setText("Password is too short");
         } else if (!passwordField.getText().equals(confirmPassword.getText())){
             signUpMessage.setText("Your Password dont match");

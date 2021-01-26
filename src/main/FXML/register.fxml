@@ -130,7 +130,7 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Label>
-            <Label layoutX="559.0" layoutY="494.0" prefWidth="200.0" text="Password must be longer than 12 digits and must contain at least an alphabet, a digit and a special character" textFill="#b55592" wrapText="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="7" GridPane.rowSpan="2">
+            <Label layoutX="559.0" layoutY="494.0" prefWidth="200.0" text="Password must be longer than 8 digits and must contain at least an alphabet, a digit and a special character" textFill="#b55592" wrapText="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="7" GridPane.rowSpan="2">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
