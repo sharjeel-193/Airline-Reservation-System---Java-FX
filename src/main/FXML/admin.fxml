@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.AdminController">
+   <children>
+      <TabPane prefHeight="900.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Upcoming Flights">
+                <AnchorPane>
+                  <children>
+                     <Label layoutX="52.0" layoutY="14.0" text="Upcoming Flights">
+                        <font>
+                           <Font name="System Bold" size="36.0" />
+                        </font>
+                     </Label>
+                     <Button fx:id="add_flight" layoutX="52.0" layoutY="90.0" mnemonicParsing="false" text="Add New">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Button>
+                     <Button fx:id="refresh_upcoming" layoutX="715.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Button>
+                     <TableView fx:id="upcoming_table" layoutX="52.0" layoutY="147.0" prefHeight="610.0" prefWidth="752.0">
+                       <columns>
+                         <TableColumn fx:id="upcoming_flight_name" prefWidth="200.0" text="Name" />
+                         <TableColumn fx:id="upcoming_origin" prefWidth="150.0" text="Origin" />
+                           <TableColumn fx:id="upcoming_destination" prefWidth="150.0" text="Destination" />
+                           <TableColumn fx:id="upcoming_date_time" prefWidth="150.0" text="Date / Time" />
+                           <TableColumn fx:id="upcoming_seats" prefWidth="100.0" text="Seats" />
+                       </columns>
+                     </TableView>
+                  </children></AnchorPane>
+            </Tab>
+            <Tab text="Today's Flights">
+                <AnchorPane>
+                    <children>
+                        <Label layoutX="52.0" layoutY="14.0" text="Current Flights">
+                            <font>
+                                <Font name="System Bold" size="36.0" />
+                            </font>
+                        </Label>
+
+                        <Button fx:id="refresh_current" layoutX="715.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <TableView fx:id="current_table" layoutX="52.0" layoutY="147.0" prefHeight="610.0" prefWidth="752.0">
+                            <columns>
+                                <TableColumn fx:id="current_flight_name" prefWidth="200.0" text="Name" />
+                                <TableColumn fx:id="current_origin" prefWidth="150.0" text="Origin" />
+                                <TableColumn fx:id="current_destination" prefWidth="150.0" text="Destination" />
+                                <TableColumn fx:id="current_date_time" prefWidth="150.0" text="Date / Time" />
+                                <TableColumn fx:id="current_seats" prefWidth="100.0" text="Seats" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Previous Flights">
+                <AnchorPane>
+                    <children>
+                        <Label layoutX="52.0" layoutY="14.0" text="Previous Flights">
+                            <font>
+                                <Font name="System Bold" size="36.0" />
+                            </font>
+                        </Label>
+
+                        <Button fx:id="refresh_previous" layoutX="715.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <TableView fx:id="previous_table" layoutX="52.0" layoutY="147.0" prefHeight="610.0" prefWidth="752.0">
+                            <columns>
+                                <TableColumn fx:id="previous_flight_name" prefWidth="200.0" text="Name" />
+                                <TableColumn fx:id="previous_origin" prefWidth="150.0" text="Origin" />
+                                <TableColumn fx:id="previous_destination" prefWidth="150.0" text="Destination" />
+                                <TableColumn fx:id="previous_date_time" prefWidth="150.0" text="Date / Time" />
+                                <TableColumn fx:id="previous_seats" prefWidth="100.0" text="Seats" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
