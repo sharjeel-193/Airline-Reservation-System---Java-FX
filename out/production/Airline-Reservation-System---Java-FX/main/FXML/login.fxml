@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.LoginController">
+    <left>
+        <AnchorPane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #424242;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="100.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../resources/Images/airline.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="72.0" layoutY="278.0" text="Your AIR" textAlignment="CENTER" textOverrun="CLIP">
+                    <font>
+                        <Font name="Imprint MT Shadow" size="36.0" />
+                    </font>
+                    <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startY="0.7519083896666083">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007633587786259542">
+                           <color>
+                              <Color red="0.7098039388656616" green="0.3333333432674408" blue="0.572549045085907" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.3760867416858673" green="0.631464421749115" blue="0.8868421316146851" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+                    </textFill>
+                </Label>
+            </children>
+            <effect>
+                <Blend />
+            </effect>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane fx:id="registerLink" prefHeight="600.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="61.0" layoutY="74.0" prefHeight="58.0" prefWidth="127.0" text="Login" textFill="#424242">
+                    <font>
+                        <Font name="Candara Bold" size="48.0" />
+                    </font>
+                </Label>
+                <ChoiceBox id="status" fx:id="statusChoice" layoutX="288.0" layoutY="175.0" prefWidth="150.0" />
+                <Label layoutX="117.0" layoutY="174.0" text="Status" textFill="#424242">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Label>
+                <TextField id="username" fx:id="userNameField" layoutX="288.0" layoutY="227.0" prefWidth="300.0" />
+                <Label layoutX="117.0" layoutY="226.0" text="Username" textFill="#424242">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Label>
+                <PasswordField id="password" fx:id="passwordField" layoutX="289.0" layoutY="275.0" maxWidth="300.0" prefWidth="300.0" />
+                <Label layoutX="119.0" layoutY="274.0" text="Password" textFill="#424242">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Label>
+                <Label id="loginMessageLabel" fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="237.0" layoutY="312.0" prefHeight="20.0" prefWidth="225.0" textFill="#601ae2">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Button layoutX="461.0" layoutY="348.0" mnemonicParsing="false" onAction="#logInButtonAction" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: #b55592;" styleClass="login-btn" text="Login" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Button>
+                <Button id="cancelButton" fx:id="cancelButton" layoutX="122.0" layoutY="348.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="44.0" prefWidth="127.0" style="-fx-background-color: #424242;" text="Cancel" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Button>
+            <Button contentDisplay="CENTER" layoutX="236.0" layoutY="416.0" onAction="#registrationWindow" style="-fx-background-color: transparent;" text="Dont have an Accont? Register Now" textFill="#424242">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            </children></AnchorPane>
+    </right>
+</BorderPane>

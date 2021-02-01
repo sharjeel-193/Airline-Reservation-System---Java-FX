@@ -42,10 +42,10 @@ public class LoginController {
         if(userNameField.getText().isEmpty() || passwordField.getText().isEmpty()){
             loginMessageLabel.setText("Please Enter both credentials");
         } else {
-            validateLogin();
+            validateLogin(event);
         }
     }
-    public void validateLogin(){
+    public void validateLogin(ActionEvent event){
         DatabaseConnection dbConnection = new DatabaseConnection();
         Connection connectDB = dbConnection.getconnection();
 
@@ -56,12 +56,24 @@ public class LoginController {
             while(queryResult.next()){
                 if(queryResult.getInt(1) == 1){
                     loginMessageLabel.setText("Congrats!!!");
+
                     Thread.sleep(2000);
                     if (statusChoice.getValue().equals("Admin")){
                         adminWindow();
                     } else {
                         clientWindow();
                     }
+
+//                    URL url = new File("src/main/FXML/Client_Menu.fxml").toURI().toURL();
+//                    Parent root = FXMLLoader.load(url);
+//                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./FXML/register.fxml"));
+//                    Stage stage = new Stage();
+//                    stage.setTitle("Menu");
+//                    stage.initStyle(StageStyle.UNDECORATED);
+//                    stage.setScene(new Scene(root, 800, 500));
+//                    stage.show();
+                    cancelButtonAction(event);
+
                 } else {
                     loginMessageLabel.setText("Invalid Credentials. Please try again");
                 }
@@ -108,11 +120,11 @@ public class LoginController {
     }
     public void clientWindow(){
         try{
-            URL url = new File("src/main/FXML/client.fxml").toURI().toURL();
+            URL url = new File("src/main/FXML/Client_Menu.fxml").toURI().toURL();
             Parent root = FXMLLoader.load(url);
             Stage stage = new Stage();
             stage.setTitle("Admin Panel - Your AIR");
-            stage.setScene(new Scene(root, 1500, 1000));
+            stage.setScene(new Scene(root, 800, 500));
             stage.show();
             Stage parentStage = (Stage) cancelButton.getScene().getWindow();
             parentStage.close();

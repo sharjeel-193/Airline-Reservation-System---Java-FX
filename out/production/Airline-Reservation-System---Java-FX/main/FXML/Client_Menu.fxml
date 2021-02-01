@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="592.0" style="-fx-background-color: #C1C1C1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.CMenuController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="566.0" style="-fx-background-color: #424242;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+             <ImageView fitHeight="147.0" fitWidth="163.0" layoutX="27.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="418.0" AnchorPane.topAnchor="86.0">
+                 <image>
+                     <Image url="@../../resources/Images/airline.png" />
+                 </image>
+             </ImageView>
+            <Label fx:id="lab_menu" layoutX="14.0" layoutY="250.0" text="User Menu">
+               <font>
+                  <Font name="Imprint MT Shadow" size="36.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8047619047619048" endY="0.6952380952380952" startX="0.7809523809523811">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9342105388641357" green="0.19030214846134186" blue="0.40107619762420654" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.12061403691768646" green="0.5942251682281494" blue="0.8684210777282715" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+            <Button fx:id="logout" layoutX="378.0" layoutY="317.0" mnemonicParsing="false" onAction="#cancelButtonAction" style="-fx-background-color: #616060;" text="Log Out" textFill="#387aff">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lab_welcom" alignment="TOP_CENTER" layoutX="281.0" layoutY="70.0" text="Welcome to YOUR AIR" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="281.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font name="Imprint MT Shadow" size="26.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8047619047619048" endY="0.6952380952380952" startX="0.7809523809523811">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9342105388641357" green="0.19030214846134186" blue="0.40107619762420654" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.12061403691768646" green="0.5942251682281494" blue="0.8684210777282715" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="his" layoutX="272.0" layoutY="167.0" mnemonicParsing="false" onAction="#loadHistory" style="-fx-background-color: #616060;" text="History" textFill="#f52a8c">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="book" layoutX="375.0" layoutY="167.0" mnemonicParsing="false" onAction="#loadBooking" style="-fx-background-color: #616060;" text="Booking">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5523809523809524" endY="0.9333333333333333" startX="0.42380952380952386" startY="0.16666666666666666">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9342105388641357" green="0.19030214846134186" blue="0.40107619762420654" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.13425925374031067" green="0.3939814865589142" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="prof" layoutX="485.0" layoutY="167.0" mnemonicParsing="false" onAction="#loadProfile" style="-fx-background-color: #616060;" text="Profile" textFill="#387aff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
