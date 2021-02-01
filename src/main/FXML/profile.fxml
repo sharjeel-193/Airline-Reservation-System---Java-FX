@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="494.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.ProfileController">
+    <children>
+        <Label layoutX="299.0" layoutY="21.0" text="PROFILE" textFill="#9503e4">
+            <font>
+                <Font name="Bodoni MT Bold Italic" size="29.0" />
+            </font>
+        </Label>
+        <VBox layoutX="147.0" layoutY="164.0" prefHeight="236.0" prefWidth="111.0" spacing="8.0">
+            <children>
+                <Label fx:id="name" text="Name" visible="false">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="dob" text="Date of Birth" visible="false">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="number" layoutX="10.0" layoutY="78.0" text="Contact Num" visible="false">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="cnic" layoutX="10.0" layoutY="112.0" text="CNIC No." visible="false">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="status" layoutX="10.0" layoutY="146.0" text="Status" visible="false">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+          <Label fx:id="user" layoutX="163.0" layoutY="97.0" text="Username">
+              <font>
+                  <Font name="Bell MT Bold" size="17.0" />
+              </font>
+          </Label>
+      <VBox layoutX="292.0" layoutY="162.0" prefHeight="171.0" prefWidth="201.0" spacing="9.0">
+         <children>
+            <TextField fx:id="nameField" visible="false" />
+            <TextField fx:id="dobField" layoutX="10.0" layoutY="10.0" visible="false" />
+            <TextField fx:id="contactField" layoutX="10.0" layoutY="35.0" visible="false" />
+            <TextField fx:id="cnicField" layoutX="10.0" layoutY="60.0" visible="false" />
+            <TextField fx:id="statusField" layoutX="10.0" layoutY="85.0" visible="false" />
+         </children>
+      </VBox>
+      <TextField fx:id="userinfo" layoutX="258.0" layoutY="95.0" />
+      <Button layoutX="434.0" layoutY="95.0" mnemonicParsing="false" onAction="#profileAction" text="Profile" />
+      <Button fx:id="backButton" layoutX="312.0" layoutY="366.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #545252;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font></Button>
+      <Label fx:id="lab_message" layoutX="319.0" layoutY="435.0" textFill="#e80101">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

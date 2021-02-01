@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="453.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.TravelController">
+   <children>
+      <TableView fx:id="table" layoutX="74.0" layoutY="105.0" prefHeight="264.0" prefWidth="519.0">
+        <columns>
+          <TableColumn fx:id="col_flight" prefWidth="107.0" text="Flight No" />
+          <TableColumn fx:id="col_seat" prefWidth="53.0" text="SeatNo" />
+            <TableColumn fx:id="col_date" prefWidth="129.0" text="Date of Travel" />
+            <TableColumn fx:id="col_from" prefWidth="119.0" text="From" />
+            <TableColumn fx:id="col_dest" prefWidth="110.0" text="Destination" />
+        </columns>
+      </TableView>
+      <Label layoutX="208.0" layoutY="14.0" text="Travel history" textFill="#5f07e5">
+         <font>
+            <Font name="Bell MT Italic" size="27.0" />
+         </font>
+      </Label>
+      <HBox layoutX="29.0" layoutY="46.0" prefHeight="52.0" prefWidth="458.0" spacing="4.0">
+         <children>
+
+            <Label prefHeight="17.0" prefWidth="149.0" text="Enter USERNAME to check ">
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="tfield" />
+            <Button fx:id="fetch" mnemonicParsing="false" onAction="#FetchData" text="Fetch" />
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Button fx:id="back" layoutX="603.0" layoutY="237.0" mnemonicParsing="false" onAction="#backAction" style="-fx-background-color: #545353;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

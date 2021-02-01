@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.RegisterController">
+   <left>
+      <AnchorPane prefHeight="900.0" prefWidth="400.0" style="-fx-background-color: #424242;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="50.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/Images/airline.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="96.0" layoutY="437.0" text="Your AIR">
+               <font>
+                  <Font name="Imprint MT Shadow" size="48.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7098039388656616" green="0.3333333432674408" blue="0.572549045085907" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.3764705955982208" green="0.6313725709915161" blue="0.886274516582489" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="78.0" prefWidth="494.0" text="Sign Up as Client" GridPane.columnSpan="5" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2">
+               <font>
+                  <Font name="Candara Bold" size="64.0" />
+               </font></Label>
+            <Label text="Full Name" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fullNameField" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label text="Date of Birth" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dobField" prefHeight="26.0" prefWidth="260.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+            <Label text="CNIC No." GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cnicField" layoutX="169.0" layoutY="179.0" prefHeight="39.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="338.0" text="Contact No." GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="contactField" layoutX="169.0" layoutY="330.0" prefHeight="39.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="425.0" text="Username" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameField" layoutX="169.0" layoutY="417.0" prefHeight="39.0" prefWidth="244.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="500.0" text="Password" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="574.0" text="Confirm Password" wrapText="true" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <Label prefWidth="200.0" text="Username must only contain digits and alphabets" textFill="#b55592" wrapText="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="559.0" layoutY="494.0" prefWidth="200.0" text="Password must be longer than 12 digits and must contain at least an alphabet, a digit and a special character" textFill="#b55592" wrapText="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="7" GridPane.rowSpan="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="confirmPassword" layoutX="168.0" layoutY="561.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" prefWidth="150.0" style="-fx-background-color: #424242;" text="Cancel" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#signUpAction" prefWidth="150.0" style="-fx-background-color: #601ae2;" text="Sign Up" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#loginWindow" style="-fx-background-color: transparent;" text="Already have an Account? Log In Here" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="11">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="signUpMessage" textFill="#b55592" wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <Label text="e.g: 331##########" textFill="#b55592" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="e.g: 9XXXXXXXXXXX" textFill="#b55592" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </GridPane>
+   </center>
+</BorderPane>
