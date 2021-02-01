@@ -4,13 +4,15 @@ import java.time.LocalDateTime;
 
 public class FlightModel {
 
-    String flight_no, origin, destination, time, status;
+    String flight_no, origin, destination, date, time, status;
     int seats;
 
-    public FlightModel(String flight_no, String origin, String destination, String time, int seats, String status) {
+
+    public FlightModel(String flight_no, String origin, String destination, String date, String time, int seats, String status) {
         this.flight_no = flight_no;
         this.origin = origin;
         this.destination = destination;
+        this.date = date;
         this.time = time;
         this.seats = seats;
         this.status = status;
@@ -20,6 +22,13 @@ public class FlightModel {
         return status;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
     public void setStatus(String status) {
         this.status = status;
     }

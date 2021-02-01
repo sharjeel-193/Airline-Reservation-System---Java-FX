@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.AdminController">
+<AnchorPane prefHeight="932.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.AdminController">
    <children>
       <TabPane prefHeight="900.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -16,7 +16,7 @@
                            <Font name="System Bold" size="36.0" />
                         </font>
                      </Label>
-                     <Button fx:id="add_flight" layoutX="52.0" layoutY="90.0" mnemonicParsing="false" text="Add New">
+                     <Button fx:id="add_flight" layoutX="52.0" layoutY="90.0" mnemonicParsing="false" onAction="#addFlightWindow" text="Add New">
                         <font>
                            <Font size="18.0" />
                         </font>
@@ -26,15 +26,26 @@
                            <Font size="14.0" />
                         </font>
                      </Button>
-                     <TableView fx:id="upcoming_table" layoutX="52.0" layoutY="147.0" prefHeight="610.0" prefWidth="752.0">
+                     <Button fx:id="active_btn" layoutX="452.0" layoutY="97.0" mnemonicParsing="false" onAction="#activeAction" style="-fx-background-color: green;" text="Active" textFill="WHITE" />
+                      <Button fx:id="cancel_btn" layoutX="525.0" layoutY="97.0" mnemonicParsing="false" onAction="#cancelAction" style="-fx-background-color: red;" text="Cancel" textFill="WHITE" />
+                     <TableView fx:id="upcoming_table" layoutX="52.0" layoutY="152.0" prefHeight="870.0" prefWidth="904.0" AnchorPane.bottomAnchor="-152.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="152.0">
                        <columns>
                          <TableColumn fx:id="upcoming_flight_name" prefWidth="200.0" text="Name" />
                          <TableColumn fx:id="upcoming_origin" prefWidth="150.0" text="Origin" />
                            <TableColumn fx:id="upcoming_destination" prefWidth="150.0" text="Destination" />
-                           <TableColumn fx:id="upcoming_date_time" prefWidth="150.0" text="Date / Time" />
+                           <TableColumn fx:id="upcoming_date" prefWidth="150.0" text="Date" />
+                           <TableColumn fx:id="upcoming_time" prefWidth="150.0" text="Time" />
                            <TableColumn fx:id="upcoming_seats" prefWidth="100.0" text="Seats" />
                        </columns>
+                        <contextMenu>
+                           <ContextMenu>
+                             <items>
+                               <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                             </items>
+                           </ContextMenu>
+                        </contextMenu>
                      </TableView>
+                     <Label fx:id="message_change" layoutX="641.0" layoutY="101.0" />
                   </children></AnchorPane>
             </Tab>
             <Tab text="Today's Flights">
@@ -51,12 +62,13 @@
                                 <Font size="14.0" />
                             </font>
                         </Button>
-                        <TableView fx:id="current_table" layoutX="52.0" layoutY="147.0" prefHeight="610.0" prefWidth="752.0">
+                        <TableView fx:id="current_table" layoutX="50.0" layoutY="147.0" prefHeight="610.0" prefWidth="909.0">
                             <columns>
                                 <TableColumn fx:id="current_flight_name" prefWidth="200.0" text="Name" />
                                 <TableColumn fx:id="current_origin" prefWidth="150.0" text="Origin" />
                                 <TableColumn fx:id="current_destination" prefWidth="150.0" text="Destination" />
-                                <TableColumn fx:id="current_date_time" prefWidth="150.0" text="Date / Time" />
+                                <TableColumn fx:id="current_date" prefWidth="150.0" text="Date" />
+                                <TableColumn fx:id="current_time" prefWidth="150.0" text="Time" />
                                 <TableColumn fx:id="current_seats" prefWidth="100.0" text="Seats" />
                             </columns>
                         </TableView>
@@ -77,12 +89,13 @@
                                 <Font size="14.0" />
                             </font>
                         </Button>
-                        <TableView fx:id="previous_table" layoutX="52.0" layoutY="147.0" prefHeight="610.0" prefWidth="752.0">
+                        <TableView fx:id="previous_table" layoutX="52.0" layoutY="147.0" prefHeight="610.0" prefWidth="907.0">
                             <columns>
                                 <TableColumn fx:id="previous_flight_name" prefWidth="200.0" text="Name" />
                                 <TableColumn fx:id="previous_origin" prefWidth="150.0" text="Origin" />
                                 <TableColumn fx:id="previous_destination" prefWidth="150.0" text="Destination" />
-                                <TableColumn fx:id="previous_date_time" prefWidth="150.0" text="Date / Time" />
+                                <TableColumn fx:id="previous_date" prefWidth="150.0" text="Date" />
+                                <TableColumn fx:id="previous_time" prefWidth="150.0" text="Time" />
                                 <TableColumn fx:id="previous_seats" prefWidth="100.0" text="Seats" />
                             </columns>
                         </TableView>

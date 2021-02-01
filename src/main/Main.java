@@ -18,6 +18,9 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("./FXML/admin.fxml"));
         primaryStage.setTitle("Admin Panel - Your AIR");
         primaryStage.setScene(new Scene(root, 1200, 900));
+//        Parent root = FXMLLoader.load(getClass().getResource("./FXML/addFlight.fxml"));
+//        primaryStage.setTitle("Add Flight - Your AIR");
+//        primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
     }
 
