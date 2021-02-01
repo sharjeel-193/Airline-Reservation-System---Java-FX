@@ -228,7 +228,6 @@ public class AdminController implements Initializable {
                     statement.executeUpdate(query);
                     message_change.setText("Flight Activated");
                     handleRefresh();
-                    TimeUnit.SECONDS.sleep(5);
                     message_change.setText("");
                 } catch (Exception e){
                     e.printStackTrace();
@@ -249,7 +248,6 @@ public class AdminController implements Initializable {
                     statement.executeUpdate(query);
                     message_change.setText("Flight Cancelled");
                     handleRefresh();
-                    TimeUnit.SECONDS.sleep(5);
                     message_change.setText("");
                 } catch (Exception e){
                     e.printStackTrace();

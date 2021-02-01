@@ -20,7 +20,7 @@ import java.sql.Statement;
 
 
 public class LoginController {
-    ObservableList<String> statusChoicesList = FXCollections.observableArrayList("Client", "Admin", "Staff");
+    ObservableList<String> statusChoicesList = FXCollections.observableArrayList("Client", "Admin");
     @FXML
     private Button cancelButton;
     @FXML
@@ -49,13 +49,19 @@ public class LoginController {
         DatabaseConnection dbConnection = new DatabaseConnection();
         Connection connectDB = dbConnection.getconnection();
 
-        String verifyLogin = "SELECT COUNT(1) FROM users WHERE username = '"+userNameField.getText()+"' AND password = '"+passwordField.getText()+"';";
+        String verifyLogin = "SELECT COUNT(1) FROM users WHERE username = '"+userNameField.getText()+"' AND password = '"+passwordField.getText()+"'and status='"+statusChoice.getValue()+"';";
         try {
             Statement statement = connectDB.createStatement();
             ResultSet queryResult = statement.executeQuery(verifyLogin);
             while(queryResult.next()){
                 if(queryResult.getInt(1) == 1){
                     loginMessageLabel.setText("Congrats!!!");
+                    Thread.sleep(2000);
+                    if (statusChoice.getValue().equals("Admin")){
+                        adminWindow();
+                    } else {
+                        clientWindow();
+                    }
                 } else {
                     loginMessageLabel.setText("Invalid Credentials. Please try again");
                 }
@@ -70,7 +76,6 @@ public class LoginController {
         try{
             URL url = new File("src/main/FXML/register.fxml").toURI().toURL();
             Parent root = FXMLLoader.load(url);
-//            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("./FXML/register.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Sign Up - Your AIR");
             stage.initStyle(StageStyle.UNDECORATED);
@@ -83,7 +88,37 @@ public class LoginController {
         }
     }
     public void cancelButtonAction(ActionEvent event){
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
+        Stage parentStage = (Stage) cancelButton.getScene().getWindow();
+        parentStage.close();
+    }
+    public void adminWindow(){
+        try{
+            URL url = new File("src/main/FXML/admin.fxml").toURI().toURL();
+            Parent root = FXMLLoader.load(url);
+            Stage stage = new Stage();
+            stage.setTitle("Admin Panel - Your AIR");
+            stage.setScene(new Scene(root, 1200, 900));
+            stage.show();
+            Stage parentStage = (Stage) cancelButton.getScene().getWindow();
+            parentStage.close();
+        } catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+    public void clientWindow(){
+        try{
+            URL url = new File("src/main/FXML/client.fxml").toURI().toURL();
+            Parent root = FXMLLoader.load(url);
+            Stage stage = new Stage();
+            stage.setTitle("Admin Panel - Your AIR");
+            stage.setScene(new Scene(root, 1500, 1000));
+            stage.show();
+            Stage parentStage = (Stage) cancelButton.getScene().getWindow();
+            parentStage.close();
+        } catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
     }
 }
